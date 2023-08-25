@@ -1,0 +1,51 @@
+<style>
+    body{
+        background-image: linear-gradient(to right, aqua 50%, greenyellow 50%);
+        color: gol;
+    }
+.one{
+    text-align: center;
+    margin-top: 20%;
+    font-size: 100px;
+}
+.two{
+    text-align: center;
+    font-size: xx-large;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="one">
+        <p id="val" class="text-success">0</p>
+    </div>
+    <div id="inc" class="two"><input type="button" onclick="add()" class="bg-primary rounded" value="+"> 
+        <input type="button" onclick="reset()" class="bg-white rounded" value="Reset"> 
+        <input type="button" onclick="dec()" class="bg-danger rounded" value="-">
+    </div>
+
+    <script>
+         var b = 0;
+       function add(){
+        b++;
+     document.getElementById("val").innerHTML=b;
+    }
+    // var b=0;
+    function dec(){
+        b--;
+        document.getElementById("val").innerHTML=b;
+    }
+   function reset(){
+    b=0;
+    document.getElementById("val").innerHTML=b;
+   }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

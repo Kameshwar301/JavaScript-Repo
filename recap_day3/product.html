@@ -1,0 +1,82 @@
+<style>
+    .text{
+        font-size: xx-large;
+    }
+    /* table tr td{
+        border: 5px solid yellow;
+    } */
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodduct add cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex bg-dark text-white">
+        <div id="img">
+            <img src="" id="myTshirt">
+           
+        
+    </div>
+    <div class="ms-5 text-white bg-secondary">
+        <h2 id="head"></h2>
+        <h4>Colourblock Crew-Neck T-shirt | M</h4>
+        <p id="price" class="text-danger-emphasis text">₹325</p>
+        <span><input type="button" onclick="add()" value="+"><span id="qty"> 0 </span><input type="button" onclick="dec()" value="-"></span>
+        <h4>product details</h4>
+        <table id="mainTab"></table>
+    </div>
+</div>
+    <script>
+        var product = {
+            heading:"Boys Top Wear",
+            imgSrc : "https://assets.ajio.com/medias/sys_master/root/20220411/6r9R/6253e85ff997dd03e2547c10/-473Wx593H-462876014-black-MODEL.jpg",
+            info:["Care Instructions: Hand Wash Only","Fit Type: Regular Fit","Short sleeve Polo T-shirt","Collar style : Spread Collar"]
+        };
+        var tshirt = document.getElementById("img");
+        var shirt = document.getElementById("myTshirt").src=product.imgSrc;
+            
+        var price= 325;
+        var qty = 0;
+        function add(){
+            qty++;
+           var a= document.getElementById("qty").innerText=qty;
+           var c = a * price;
+           document.getElementById("price").innerText="₹"+c;
+        }
+        function dec(){
+                    
+            qty--;
+            console.log(qty)
+            var a= document.getElementById("qty").innerText=qty;
+            if(a>=0){
+            var c = a*price;
+            document.getElementById("price").innerText="₹"+c; 
+        }
+        else{
+            qty =0;
+            window.alert('Qty can not be below 0');
+            document.getElementById("qty").innerText=qty;
+        }
+         
+        }
+
+
+
+        var myHeading = document.getElementById("head").innerHTML=product.heading;
+        
+      
+        var tab = document.getElementById("mainTab");
+        for(let data of product.info){
+            var tr = document.createElement("tr");
+            tr.innerHTML="<td>"+data+"</td>";
+            tr.className="text-white"
+            tab.appendChild(tr);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
