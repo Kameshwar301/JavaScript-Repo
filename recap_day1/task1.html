@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Recap Task1</title>
+        <link rel="stylesheet" href="./task1.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+    <body>
+        <section id="task1">
+                <div id="taskFirst">
+                    <h2 class="ms-5">To-Do List</h2>
+                    <input type="text" id="toDo" name="toDo" class="ms-5" placeholder="type in your todo to add">
+                    <input type="button" value="ADD" onclick="toDO()" id="myB"><br><br>
+                    <a onclick="show()" id="link1" class="all ms-5">All</a>
+                    <a href="" class="pend ms-3">Pending</a>
+                    <a href="" class="comp ms-3">Completed</a><br>
+                      <hr>
+                </div>
+                <div id="taskPage" class="taskOne ms-5">
+                    <p id="line"></p>
+                    <p id="line1"></p>
+
+                </div>
+                <hr>
+        </section>
+
+        <script src="./array_item.js" type="text/JavaScript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>
